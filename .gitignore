@@ -1,0 +1,8 @@
+build.sbt
+project/
+target/
+
+.ensime
+.ensime_cache
+
+.DS_Store
