@@ -1,1 +1,2 @@
 # ProjectEulerScala
+scalaを使ってProjectEulerを解いていきます
