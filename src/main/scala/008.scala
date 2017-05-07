@@ -23,16 +23,20 @@ object Main {
                  "05886116467109405077541002256983155200055935729725" +
                  "71636269561882670428252483600823257530420752963450"
 
-    //println(maxSum(number))
+    maxSum(listNum(number))
   }
   def listNum(num: String): List[String] = {
     return num.sliding(13, 1).toList
   }
-  def maxSum(numList: List[String]): String = {
-    for( var i <- numList ){
-      if(!i.contains("0")) {
-
-      }
+  def maxSum(numList: List[String]) = {
+    var max = 0;
+    for( i <- numList
+      if !i.contains("0")){
+        if( i.toList.map(_.asDigit).product > max ){
+          max = i.toList.map(_.asDigit).product
+        }
+        println(i.toList.map(_.asDigit))
     }
+    println(max)
   }
 }
